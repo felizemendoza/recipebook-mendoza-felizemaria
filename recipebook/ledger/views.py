@@ -28,7 +28,7 @@ def recipes(request):
                     "quantity": "1 packet"
                 }
             ],
-            "link": "/ledger/recipe/1"
+            "link": "/recipe/1"
         },
         {
             "name": "Recipe 2",
@@ -62,7 +62,7 @@ def recipes(request):
                     "quantity": "1 kilo"
                 }
             ],
-            "link": "/ledger/recipe/2"
+            "link": "/recipe/2"
             }
         ]
     }
