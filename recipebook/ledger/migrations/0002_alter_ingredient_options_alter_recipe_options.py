@@ -6,16 +6,19 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ledger', '0001_initial'),
+        ("ledger", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='ingredient',
-            options={'verbose_name': 'ingredient', 'verbose_name_plural': 'ingredients'},
+            name="ingredient",
+            options={
+                "verbose_name": "ingredient",
+                "verbose_name_plural": "ingredients",
+            },
         ),
         migrations.AlterModelOptions(
-            name='recipe',
-            options={'verbose_name': 'recipe', 'verbose_name_plural': 'recipes'},
+            name="recipe",
+            options={"verbose_name": "recipe", "verbose_name_plural": "recipes"},
         ),
     ]
