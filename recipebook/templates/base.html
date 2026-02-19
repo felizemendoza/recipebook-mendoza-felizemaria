@@ -1,11 +1,15 @@
+<!DOCTYPE html>
+
 <html lang="en">
     <head>
         <title>{% block title %}Recipe Book{% endblock %}</title>
         {% block styles %}{% endblock %}
     </head>
     <body>
+        <h1>Recipe Book</h1>
         <div id="content">
-            {% block content %}{% endblock %}
+            {% block content %}
+            {% endblock %}
         </div>
         {% block scripts %}{% endblock %}
     </body>
