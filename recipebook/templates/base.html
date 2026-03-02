@@ -16,6 +16,10 @@
     {% endif %}
     <body>
         <h1>Recipe Book</h1>
+        <h2>
+            {% block heading %}
+            {% endblock %}
+        </h2>
         <div id="content">
             {% block content %}
             {% endblock %}
