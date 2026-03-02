@@ -5,6 +5,15 @@
         <title>{% block title %}Recipe Book{% endblock %}</title>
         {% block styles %}{% endblock %}
     </head>
+    {% if request.user.is_authenticated %}
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Logout</button>
+        </form>
+    {% else %}
+        <a href="{% url 'login' %}">Login</a>
+    {% endif %}
     <body>
         <h1>Recipe Book</h1>
         <div id="content">
