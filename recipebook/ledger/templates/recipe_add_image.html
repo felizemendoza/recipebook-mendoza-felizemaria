@@ -7,4 +7,5 @@
         {{ form }}
         <input type="submit" name="submit" value="Add Image">   
     </form>
+    <a href="{% url 'ledger:recipe_detail' pk=view.kwargs.pk %}">Return</a>
 {% endblock %}
