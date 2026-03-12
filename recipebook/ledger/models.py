@@ -7,9 +7,7 @@ from django.core.validators import MinLengthValidator
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
-    bio = models.TextField(
-        validators=[MinLengthValidator(255)]
-    )
+    bio = models.TextField(validators=[MinLengthValidator(255)])
 
     def __str__(self):
         return f"{self.name}"
@@ -60,7 +58,10 @@ class RecipeIngredient(models.Model):
     def __str__(self):
         return f"{self.quantity} {self.ingredient.name}"
 
+
 class RecipeImage(models.Model):
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to="images/")
     description = models.TextField(max_length=255)
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="image")
+    recipe = models.ForeignKey(
+        Recipe, on_delete=models.CASCADE, related_name="image"
+    )
