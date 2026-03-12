@@ -5,9 +5,6 @@
 {% block content %}
     <h3>{{ recipe.name }}</h3>
     <h4>By {{ recipe.author }}</h4>
-    {% for image in recipe.image.all %}
-    <img src="{{ image.image.url }}" alt="{{ image.description }}">
-    {% endfor %}
     <ul>
         {% for ingredient in recipe.ingredients.all %}
             <li>
@@ -15,4 +12,7 @@
             </li>
         {% endfor %}
     </ul>
+    {% for image in recipe.image.all %}
+        <img src="{{ image.image.url }}" alt="{{ image.description }}">
+    {% endfor %}
 {% endblock %}
